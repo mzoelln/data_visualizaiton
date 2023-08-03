@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
+import numpy as np
 
 filename_ls = []
 for i in os.listdir():
