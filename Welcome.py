@@ -26,7 +26,6 @@ fig = plt.figure()
 plt.scatter(df[x_axis], df[y_axis])
 st.pyplot(fig)
 
-output_notebook()
 p = figure(x_axis_label=x_axis+' (wt%)', y_axis_label=y_axis+' (wt%)')
 p.circle(df[x_axis]/10000, df[y_axis]/10000)
 show(p)
