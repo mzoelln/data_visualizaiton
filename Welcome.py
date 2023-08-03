@@ -10,9 +10,9 @@ for i in os.listdir():
   if i.endswith('.csv'):
     filename_ls.append(i)
 
-st.write('Hello World!')
+st.write('Plotting data with bokeh in Streamlit')
 
-df = pd.read_csv(i[0])
+df = pd.read_csv(filename_ls[0])
 el_list = df.columns.tolist()[27:80]
 # st.dataframe(df)
 
