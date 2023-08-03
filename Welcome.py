@@ -36,5 +36,5 @@ for i in options:
   p.line([data[x_axis].min()/10000, data[x_axis].max()/10000], [data[y_axis].mean()/10000,data[y_axis].mean()/10000], line_color='green' )
   p.line([data[x_axis].mean()/10000, data[x_axis].mean()/10000], [data[y_axis].min()/10000,data[y_axis].max()/10000], line_color='red' )
 
-  st.bokeh_chart(p, use_container_width=True)
+st.bokeh_chart(p, use_container_width=True)
 
