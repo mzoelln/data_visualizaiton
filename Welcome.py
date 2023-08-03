@@ -21,14 +21,14 @@ el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select x-axis element', el_list)
 y_axis = st.selectbox('select y-axis element', el_list)
 
-fig = plt.figure()
-plt.scatter(df[x_axis]/10000, df[y_axis]/10000)
-plt.title('with matplotlib without multiselectbox')
-st.pyplot(fig)
+# fig = plt.figure()
+# plt.scatter(df[x_axis]/10000, df[y_axis]/10000)
+# plt.title('with matplotlib without multiselectbox')
+# st.pyplot(fig)
 
 for i in options:
   data = pd.read_csv(i)
   p = figure(x_axis_label=x_axis+' (wt%)', y_axis_label=y_axis+' (wt%)')
   p.circle(data[x_axis]/10000, data[y_axis]/10000)
+  st.bokeh_chart(p, use_container_width=True)
 
-st.bokeh_chart(p, use_container_width=True)
