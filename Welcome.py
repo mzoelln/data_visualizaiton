@@ -19,4 +19,5 @@ el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select x-axis element', el_list)
 y_axis = st.selectbox('select y-axis element', el_list)
 
-st.plt.scatter(df[x_axis], df[y_axis])
+fig = plt.scatter(df[x_axis], df[y_axis])
+st.plt(fig)
