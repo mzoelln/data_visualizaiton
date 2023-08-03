@@ -13,7 +13,7 @@ st.write('Hello World!')
 df = pd.read_csv('Galapagos Islands.csv')
 st.dataframe(df)
 
-options = st.multiselect('select location', filename_ls, filename_ls[0])
+options = st.multiselect('select location', filename_ls)
 
 el_list = df.columns.tolist()[27:80]
 x_axis = st.selectbox('select x-axis element', el_list)
