@@ -34,7 +34,6 @@ for i in options:
   data = pd.read_csv(i)
   p.circle(data[x_axis]/10000, data[y_axis]/10000)
   p.line([data[x_axis].min()/10000, data[x_axis].max()/10000], [data[y_axis].mean()/10000,data[y_axis].mean()/10000], line_color='green' )
-  p.rect
   p.line([data[x_axis].mean()/10000, data[x_axis].mean()/10000], [data[y_axis].min()/10000,data[y_axis].max()/10000], line_color='red' )
 
   st.bokeh_chart(p, use_container_width=True)
