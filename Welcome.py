@@ -3,8 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 import numpy as np
-from bokeh.plotting import figure, show
-from bokeh.io import output_notebook
+from bokeh.plotting import figure
 
 filename_ls = []
 for i in os.listdir():
@@ -28,6 +27,5 @@ st.pyplot(fig)
 
 p = figure(x_axis_label=x_axis+' (wt%)', y_axis_label=y_axis+' (wt%)')
 p.circle(df[x_axis]/10000, df[y_axis]/10000)
-show(p)
 
 st.bokeh_chart(p, use_container_width=True)
