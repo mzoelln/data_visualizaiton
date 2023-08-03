@@ -12,7 +12,7 @@ for i in os.listdir():
 
 st.write('Hello World!')
 
-# df = pd.read_csv('Galapagos Islands.csv')
+df = pd.read_csv('Galapagos Islands.csv')
 # st.dataframe(df)
 
 options = st.multiselect('select location', filename_ls)
