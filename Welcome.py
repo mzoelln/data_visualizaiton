@@ -13,7 +13,10 @@ st.write('Hello World!')
 df = pd.read_csv('Galapagos Islands.csv')
 st.dataframe(df)
 
-el_list = df.columns.tolist()[27:80]
-x_axis = st.selectbox('select element', el_list)
+options = st.multiselect('select location', filename_ls, filename_ls[0)
 
-st.multiselect('select location', filename_ls, filename_ls[0])
+el_list = df.columns.tolist()[27:80]
+x_axis = st.selectbox('select x-axis element', el_list)
+y_axis = st.selectbox('select y-axis element', el_list)
+
+plt.scatter(options[x_axis],options[y_axis])
