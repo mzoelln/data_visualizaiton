@@ -12,7 +12,7 @@ for i in os.listdir():
 
 st.write('Plotting data with bokeh in Streamlit')
 
-st.radius(1,2,3)
+st.radio('Select a data file', (filename_ls[0], filename_ls[1], filename_ls[-1]))
 
 df = pd.read_csv(filename_ls[0])
 el_list = df.columns.tolist()[27:80]
