@@ -49,8 +49,8 @@ for i in options:
     st.bokeh_chart(p, use_container_width=True)
     
   with tab3:
-    st.write('Mean of '+ x_axis +' in wt%: ' + data[x_axis].mean()/10000)
-    st.write('Mean of '+ y_axis +' in wt%: ' + data[y_axis].mean()/10000)
+    st.write('Mean of '+ x_axis +' in wt%: ' + round(data[x_axis].mean()/10000, 2))
+    st.write('Mean of '+ y_axis +' in wt%: ' + round(data[y_axis].mean()/10000, 2))
 
 
 
